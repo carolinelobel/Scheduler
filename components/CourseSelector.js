@@ -5,7 +5,7 @@ import { ScrollView, StyleSheet, View } from 'react-native';
 import TermSelector from './termSelector';
 import { getCourseNumber, getCourseTerm, hasConflict, terms } from '../utils/course.js';
 
-const CourseSelector = ({courses}) => {
+const CourseSelector = ({courses, view}) => {
     const [selected, setSelected] = useState([]);
     
     const toggle = course => setSelected(selected => (
@@ -20,6 +20,7 @@ const CourseSelector = ({courses}) => {
             isDisabled={hasConflict(course, selected)}
               select={toggle} 
               isSelected={selected.includes(course)}
+              view={view}
             />
           ))
         }
