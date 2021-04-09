@@ -4,7 +4,7 @@ import { SafeAreaView, StyleSheet, Text } from 'react-native';
 import CourseList from '../components/CourseList';
 import UserContext from '../UserContext';
 //import CourseEditScreen from './CourseEditScreen';
-import { firebase } from '../firebase';
+import { firebase } from '../utils/firebase';
 
 /*const schedule = {
   title: "CS Courses for 2018-2019",
